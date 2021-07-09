@@ -3,6 +3,7 @@
 
     &__photo {
         width: 55%;
+        border: 3px solid $color-primary-dark;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
         border-radius: 4px;
         position: absolute;
@@ -26,6 +27,7 @@
 
         &:hover {
             outline: 1rem solid $color-primary;
+            border: none;
             transform: scale(1.1) translateY(-.5rem);
             box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
             z-index: 5;
@@ -34,6 +36,7 @@
 
     &:hover &__photo:not(:hover) {
         transform: scale(.8);
+        border: none;
     }
 }
 
