@@ -11,6 +11,16 @@
     position: relative;
     box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
+    @include respond(tab-port) {
+        width: 100%;
+        padding: 4rem;
+        text-align: center;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
@@ -20,6 +30,12 @@
         -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
+
+        @include respond(tab-port) {
+        -webkit-shape-outside: circle(0% at 0% 0%);
+        shape-outside: circle(0% at 0% 0%);
+        transform: translateX(-3rem )skewX(0);
+        }
     }
 
     &__img {
@@ -27,10 +43,18 @@
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
         transition: all .5s;
+
+        @include respond(tab-port) {
+            display: none;
+        }
     }
 
     &__text {
         transform: skewX(12deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
     }
 
     &__caption {
