@@ -63,7 +63,7 @@
         width: 100%;
 
         @include respond(tab-land) {
-            width: 50%;
+            width: 100%;
             height: 39.991rem;
             display: inline-block;
             float: left;
